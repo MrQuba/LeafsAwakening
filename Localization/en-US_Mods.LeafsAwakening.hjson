@@ -2,7 +2,7 @@
 
 Items: {
 	AbstractLeafItem: {
-		DisplayName: "Abstract Leaf Item"
+		DisplayName: Abstract Leaf Item
 		Tooltip:
 			'''
 			Template of an item
@@ -10,4 +10,42 @@ Items: {
 			It's snowing on Mt.Fuji
 			'''
 	}
+
+	SharpLeaf: {
+		DisplayName: Sharp Leaf
+		Tooltip: ""
+	}
+
+	LeafsAid: {
+		DisplayName: Leafs Aid
+		Tooltip: ""
+	}
+
+	PotatoMineSeed: {
+		DisplayName: Potato Mine Seed
+		Tooltip: ""
+	}
+
+	PotatoMine: {
+		DisplayName: Potato Mine
+		Tooltip: ""
+	}
 }
+
+Projectiles: {
+	PotatoMine.DisplayName: Potato Mine
+	SharpLeafProjectile.DisplayName: Sharp Leaf Projectile
+	PeaShooter.DisplayName: Pea Shooter
+	Pea.DisplayName: Pea
+	PotatoMineProjectile.DisplayName: Potato Mine Projectile
+}
+
+Buffs: {
+	PeaShooterMinionBuff: {
+		DisplayName: Pea Shooter Minion Buff
+		Description: Mods.LeafsAwakening.Buffs.PeaShooterMinionBuff.Description
+	}
+}
+
+Content.Projectiles.Pea.DisplayName: Pea
+DamageClasses.LeafDamage.DisplayName: Leaf Damage
