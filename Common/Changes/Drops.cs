@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.ItemDropRules;
 
 namespace LeafsAwakening.Common.Changes
 {
 	public class Drops : GlobalNPC
 	{
 		private List<int> Zombies = new();
+		private bool areGroupsInitialized = false;
 		private void initGroups()
 		{
 			Zombies.Add(NPCID.Zombie);
@@ -25,14 +27,14 @@ namespace LeafsAwakening.Common.Changes
 			Zombies.Add(NPCID.ZombieSuperman);
 			Zombies.Add(NPCID.ZombieSweater);
 			Zombies.Add(NPCID.ZombieXmas);
+			areGroupsInitialized = true;
 		}
 		public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
 		{
+			if (!areGroupsInitialized) initGroups();
 			if(Zombies.Contains(npc.type))
 			{
-				// TODO, add loot for zombies:
-				// 2-10 Potatoes
-				// 25% chance
+				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Potato>(), chanceDenominator: 4, minimumDropped: 2, maximumDropped: 10));
 			}
 		}
 	}
