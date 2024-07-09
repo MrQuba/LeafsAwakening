@@ -30,6 +30,21 @@ Items: {
 		DisplayName: Potato Mine
 		Tooltip: ""
 	}
+
+	Potato: {
+		DisplayName: Potato
+		Tooltip: ""
+	}
+
+	BreezeDash: {
+		DisplayName: Breeze Dash
+		Tooltip: ""
+	}
+
+	PeaShooter: {
+		DisplayName: Pea Shooter
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -38,6 +53,7 @@ Projectiles: {
 	PeaShooter.DisplayName: Pea Shooter
 	Pea.DisplayName: Pea
 	PotatoMineProjectile.DisplayName: Potato Mine Projectile
+	PeaShooterProjectile.DisplayName: Pea Shooter Projectile
 }
 
 Buffs: {

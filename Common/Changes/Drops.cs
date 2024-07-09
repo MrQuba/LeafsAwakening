@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
+using LeafsAwakening.Content.Accessories;
 
 namespace LeafsAwakening.Common.Changes
 {
@@ -29,12 +30,17 @@ namespace LeafsAwakening.Common.Changes
 			Zombies.Add(NPCID.ZombieXmas);
 			areGroupsInitialized = true;
 		}
+		public override bool InstancePerEntity => true;
 		public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
 		{
 			if (!areGroupsInitialized) initGroups();
 			if(Zombies.Contains(npc.type))
 			{
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Potato>(), chanceDenominator: 4, minimumDropped: 2, maximumDropped: 10));
+			}
+			if(npc.type == NPCID.Harpy)
+			{
+				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BreezeDash>(), chanceDenominator: 8, minimumDropped: 1, maximumDropped: 1));
 			}
 		}
 	}

@@ -8,7 +8,8 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
-	  <Folder Include="Content\Weapons\Plants\PeaShooter\" />
+	  <None Remove="Content\Accessories\BreezeDash.png" />
+	  <None Remove="Content\Weapons\Plants\PeaShooter\PeaShooterProjectile.png" />
 	</ItemGroup>
 
 	<!-- References -->
